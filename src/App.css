@@ -1,0 +1,34 @@
+.App {
+    /* height: 500px;  */
+    /* shecvli mere, roca sheavseb  */
+    min-height: 100vh;
+    background-image: url(images/bg-intro-mobile.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    
+    padding: 20px; 
+    padding-bottom: 80px;
+    /* shecvli mere, roca sheavseb  */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+/* //////////////////////////////////////////////////////////////////////// */
+@media screen and (min-width: 950px) {
+    .App {
+        background-image: url(/src/images/bg-intro-desktop.png);
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: center; */
+        padding: 0 150px;
+        gap: 30px;
+        
+    }
+}

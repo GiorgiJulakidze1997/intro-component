@@ -5,5 +5,6 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: #FF7979;
+    min-height: 100vh;
 }

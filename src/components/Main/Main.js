@@ -9,62 +9,84 @@ export default function Main() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = () => {};
+  const onSubmit = () => {
+    console.log("render");
+  };
 
   console.log(watch("firstName"));
-  console.log("errors: ", errors);
+
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="mainBox">
+      <div className="priceDescribe">
+        <div className="priceDescribeBoxTwo">
+          <span className="priceDescribeFirstSpan">Try it free 7 days</span>
+          <span className="priceDescribeSecondSpan">
+            then $20/mo. thereafter
+          </span>
+        </div>
+      </div>
+      <form className="inputsForm" onSubmit={handleSubmit(onSubmit)}>
         <input
+          className="inputBox"
           placeholder="First Name"
           {...register("firstName", {
-            required: { value: true, message: "carieli ar unda iyos" },
+            required: { value: true, message: "First Name cannot be empty" },
             pattern: {
               value: /^[A-Za-z]+$/i,
-              message: "mxolod latinuri asoebi",
+              message: "Please enter only Latin letters",
             },
           })}
         />
         {errors.firstName && (
-          <p style={{ color: "red" }}>{errors.firstName.message}</p>
+          <div className="errorsBox">
+            <p>{errors.firstName.message}</p>
+          </div>
         )}
 
         <input
+          className="inputBox"
           placeholder="Last Name"
           {...register("lastName", {
-            required: { value: true, message: "გვარი: ცარიელია" },
+            required: { value: true, message: "Last Name cannot be empty" },
             pattern: {
               value: /^[A-Za-z]+$/i,
-              message: "გვარი: მხოლოდ ლათინური ასოები",
+              message: "Please enter only Latin letters",
             },
           })}
         />
         {errors.lastName && (
-          <p style={{ color: "red" }}>{errors.lastName.message}</p>
+          <div className="errorsBox">
+            <p>{errors.lastName.message}</p>
+          </div>
         )}
         <input
+          className="inputBox"
           type="email"
           placeholder="Email Address"
           {...register("email", {
             required: {
               value: true,
-              message: "email: ცარიელია",
+              message: "Email cannot be empty",
             },
             pattern: {
               value: /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,4}$/,
-              message: "არ ემთხვევა email-ის დაწერის ფორმას",
+              message: "Does not match email input form",
             },
           })}
         />
-        {errors.email && <p style={{ color: "red" }}>{errors.email.message}</p>}
+        {errors.email && (
+          <div className="errorsBox">
+            <p>{errors.email.message}</p>
+          </div>
+        )}
         <input
+          className="inputBox"
           placeholder="Password"
           type="password"
           {...register("password", {
             required: {
               value: true,
-              message: "password field is empty",
+              message: "Password field cannot be empty",
             },
             minLength: {
               value: 8,
@@ -78,9 +100,19 @@ export default function Main() {
           })}
         />
         {errors.password && (
-          <p style={{ color: "red" }}>{errors.password.message}</p>
+          <div className="errorsBox">
+            <p>{errors.password.message}</p>
+          </div>
         )}
-        <button type="submit">CLAIM YOUR FREE TRIAL</button>
+        <button className="button" type="submit">
+          CLAIM YOUR FREE TRIAL
+        </button>
+        <div className="lastInfoBox">
+          <span className="lastInfoFirstSpan">
+            By clicking the button, you are agreeing to our
+          </span>
+          <span className="lastInfoSecondSpan">Terms and Services</span>
+        </div>
       </form>
     </div>
   );

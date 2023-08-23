@@ -10,9 +10,9 @@ function App() {
   return (
     <div className="App">
       {/* <ChildComponent /> */}
-
       <Title />
       <Main />
+      {/* <img src={imgMobile} alt="mobile background" className="imgClass" /> */}
     </div>
   );
 }

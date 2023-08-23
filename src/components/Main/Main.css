@@ -1,11 +1,171 @@
-/* .inputsBox {
+.mainBox {
     width: 327px;
+    margin-top: 61px;
+}
+
+.inputsForm {
+    margin-top: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 327px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputBox {
+    margin-top: 10px;
+    padding-left: 15px;
+    width: 279px;
+    height: 56px;
+    border: 2px;
+    border-color: antiquewhite;
+    border-style: solid;
+    border-radius: 10px;
+    color: #3D3B48
+    
+}
+
+.errorsBox {
+    
+    width: 279px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: right;
+    color: #FF7979;
+    
+}
+
+.priceDescribe {
+    width: 327px;
+    height: 88px;
+    background-color: #5E54A4;
+    display: flex;
+    /* flex-direction: column; */
+    padding: 10px;
+    border-radius: 20px;
+
+    
+}
+
+.priceDescribeBoxTwo {
+    padding: 0 40px;
+    text-align: center;
+    padding-top: 7px;
+
+}
+
+.priceDescribeFirstSpan {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0.2678571045398712px;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+
+.priceDescribeSecondSpan {
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.2678571045398712px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 
-.inputForm {
+.button {
+    margin-top: 10px;
+    padding: 14px 0;
     width: 279px;
-    height: 56px;
-    border: 1px;
+    background-color: #38CC8B;
+    border-radius: 10px;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.lastInfoBox {
+    width: 249px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.lastInfoFirstSpan {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #A6A1CF;
     
-} */
+}
+
+.lastInfoSecondSpan {
+    
+    
+        font-family: 'Poppins', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 21px;
+        letter-spacing: 0px;
+        color: #FF7979;
+}
+
+
+@media screen and (min-width: 950px) {
+    .mainBox {
+        width: 540px;
+    }
+
+    .inputsForm {
+        width: 540px;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+    .priceDescribe {
+        width: 540px;
+        justify-content: center;
+        align-items: center;
+        height: 69px;
+        
+    }
+
+    .priceDescribeBoxTwo {
+        padding-top: 0px;
+    }
+
+    .inputBox {
+        width: 460px;
+    }
+
+    .errorsBox {
+        width: 460px;
+    }
+
+    .button {
+        width: 460px;
+    }
+
+    .lastInfoBox {
+        width: 460px;
+    }
+}
