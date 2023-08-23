@@ -102,6 +102,11 @@
 
 }
 
+.button:hover {
+    background-color: #77E2B3;
+    cursor: pointer;
+}
+
 .lastInfoBox {
     width: 249px;
     margin-top: 15px;
@@ -128,6 +133,10 @@
         line-height: 21px;
         letter-spacing: 0px;
         color: #FF7979;
+}
+
+.lastInfoSecondSpan:hover {
+    cursor: pointer;
 }
 
 
